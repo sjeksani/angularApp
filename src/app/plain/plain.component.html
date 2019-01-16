@@ -1,0 +1,14 @@
+Angular App without Material Design!!!
+<br/><br/>
+
+<form>
+	<div>
+		<input type="number" name="number" [(ngModel)]="myNumber" />
+	</div>
+<br>
+  <div>
+		<button type="submit" (click)="myNumber = myNumber - 1" [disabled]="isMouseMoveEnabled">-1</button>
+    <button type="submit" (click)="myNumber = myNumber + 1" [disabled]="isMouseMoveEnabled">+1</button>
+    <button type="submit" [innerHTML]="isMouseMoveEnabled ? 'Disable Mouse move' : 'Enable Mouse move'" (click)="toggleMouseMove()">REGISTER</button>
+	</div>
+</form>

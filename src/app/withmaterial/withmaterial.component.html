@@ -1,0 +1,22 @@
+
+<mat-toolbar>
+Angular App with Material Design
+</mat-toolbar>
+<br>
+<form>
+	<div>
+		<mat-form-field>
+			<input type="number" matInput name="number" [(ngModel)]="myNumber" placeholder="Input Number" />
+		</mat-form-field>
+	</div>
+	<br>
+	<div>
+		<button mat-icon-button color="primary" (click)="myNumber = myNumber - 1" [disabled]="isMouseMoveEnabled">
+    <mat-icon aria-label="decrease a number">exposure_neg_1</mat-icon>
+  </button>
+		<button mat-icon-button color="primary" (click)="myNumber = myNumber + 1" [disabled]="isMouseMoveEnabled">
+    <mat-icon aria-label="increase a number">exposure_plus_1</mat-icon>
+  </button>
+		<button mat-raised-button color="primary" [innerHTML]="isMouseMoveEnabled ? 'Disable Mouse move' : 'Enable Mouse move'" (click)="toggleMouseMove()"></button>
+	</div>
+</form>
